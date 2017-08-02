@@ -21,6 +21,9 @@ rename 's/what/withthis/' *.JPG
 # count lines of code from all files who are .java from this directory on
 find ./ -name "*.java" -exec wc -l  {} \;
 
+# count lines of code from al files who are .c and summarize the lines
+find ./ -name "*.c" | xargs wc -l
+
 # start something automatically
 root@localhost:/etc/init.d# cd /etc/init.d/
 root@localhost:/etc/init.d# update-rc.d wildfly defaults 
